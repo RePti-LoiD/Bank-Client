@@ -3,25 +3,91 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BankApp.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+    <ScrollView Background="#0a0a0a">
+        <VerticalStackLayout VerticalOptions="Start" Padding="10, 0" Spacing="10">
 
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+            <Border Background="#1e1e1e" StrokeThickness="0" WidthRequest="{OnPlatform Android=360, WinUI=500}" HorizontalOptions="Center" Margin="0, 10, 0, 10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15"/>
+                </Border.StrokeShape>
+                <ScrollView Margin="5">
+                    <StackLayout>
+                        <Label Text="List of accounts"
+                               TextColor="White"
+                                SemanticProperties.HeadingLevel="Level9"
+                                FontAttributes="Bold"
+                                HorizontalOptions="Start"
+                                Margin="5"/>
+                        <Grid ColumnSpacing="5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" HeightRequest="90" StrokeThickness="0">
+
+                                <Border.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#1e0d35" Offset="0"/>
+                                        <GradientStop Color="#0f101b" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+
+                                <VerticalStackLayout Padding="5">
+                                    <Label Text="Bank Account" FontAttributes="Bold" TextColor="{StaticResource White}" FontSize="20"/>
+                                    <Label Text="$2500" TextColor="{StaticResource White}" VerticalOptions="End" HorizontalOptions="Start" Margin="5" FontSize="15"/>
+                                </VerticalStackLayout>
+                            </Border>
+
+                            <Border Grid.Column="1" HeightRequest="90" StrokeThickness="0">
+
+                                <Border.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#9c1825" Offset="0"/>
+                                        <GradientStop Color="#e2745c" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+
+                                <VerticalStackLayout Padding="5">
+                                    <Label Text="Account" FontAttributes="Bold" TextColor="{StaticResource White}" FontSize="20"/>
+                                    <Label Text="$2500" TextColor="{StaticResource White}" VerticalOptions="End" HorizontalOptions="Start" Margin="5" FontSize="15"/>
+                                </VerticalStackLayout>
+                            </Border>
+
+                            <Border Grid.Column="2" HeightRequest="90" StrokeThickness="0">
+
+                                <Border.Background>
+                                    <LinearGradientBrush>
+                                        <GradientStop Color="#ffe998" Offset="0"/>
+                                        <GradientStop Color="#57370d" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Border.Background>
+
+                                <Border.StrokeShape>
+                                    <RoundRectangle CornerRadius="10"/>
+                                </Border.StrokeShape>
+
+                                <Grid Padding="5">
+                                    <Label Text="Account" FontAttributes="Bold" TextColor="{StaticResource White}" FontFamily="ClimateCrisis" FontSize="20"/>
+                                    <Label Text="$2500" TextColor="{StaticResource White}" VerticalOptions="End" HorizontalOptions="Start" FontAttributes="Italic" Margin="5" FontSize="15"/>
+                                </Grid>
+                            </Border>
+                        </Grid>
+                    </StackLayout>
+                </ScrollView>
+            </Border>
 
             <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
+                TextColor="{StaticResource Primary}"
                 Text="Welcome to .NET Multi-platform App UI"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I"
@@ -33,8 +99,8 @@
                 Text="Click me"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+                HorizontalOptions="Center"/>
+            <DatePicker/>
         </VerticalStackLayout>
     </ScrollView>
 

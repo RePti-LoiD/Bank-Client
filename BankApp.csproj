@@ -48,4 +48,25 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="Resources\Fonts\ClimateCrisis-Regular-VariableFont_YEAR.ttf" />
+	  <None Remove="Resources\Fonts\Segoe UI Bold Italic.ttf" />
+	  <None Remove="Resources\Fonts\Segoe UI Italic.ttf" />
+	  <None Remove="Resources\Fonts\Segoe-UI-Bold.ttf" />
+	  <None Remove="Resources\Fonts\Segoe-UI.ttf" />
+	  <None Remove="Resources\Images\bar_chart.png" />
+	  <None Remove="Resources\Images\edit.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\id_card.png" />
+	  <None Remove="Resources\Images\inbox.png" />
+	  <None Remove="Resources\Images\money.png" />
+	  <None Remove="Resources\Images\safebox.png" />
+	  <None Remove="Resources\Images\settings.png" />
+	  <None Remove="Resources\Images\user.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Elements\" />
+	</ItemGroup>
+
 </Project>
