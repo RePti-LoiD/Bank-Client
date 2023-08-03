@@ -12,17 +12,5 @@
             Icon="home.png"
             ContentTemplate="{DataTemplate local:MainPage}"
             Route="MainPage"/>
-
-        <ShellContent
-            Title="Hello GAY"
-            Icon="id_card.png"
-            ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage"/>
-        
-        <ShellContent
-            Title="Hello GAY"
-            Icon="safebox.png"
-            ContentTemplate="{DataTemplate local:MainPage}"
-            Route="MainPage"/>
     </TabBar>
 </Shell>
